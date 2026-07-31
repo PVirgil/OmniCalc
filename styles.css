@@ -187,6 +187,49 @@ footer p {
     max-width: 1000px;
     margin: 0;
 }
+
+
+/* List View */
+.calculator-grid.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.calculator-grid.list-view .calc-card {
+    min-height: auto;
+    padding: 18px 24px;
+
+    display: grid;
+    grid-template-columns: 60px 220px 1fr auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.calculator-grid.list-view .card-top {
+    display: contents;
+}
+
+.calculator-grid.list-view .card-icon {
+    grid-column: 1;
+}
+
+.calculator-grid.list-view h3 {
+    margin: 0;
+    grid-column: 2;
+}
+
+.calculator-grid.list-view p {
+    margin: 0;
+    grid-column: 3;
+}
+
+.calculator-grid.list-view .card-formula {
+    grid-column: 4;
+    white-space: nowrap;
+    font-size: 12px;
+    color: var(--cyan);
+}
 @media (max-width:1000px) {
   .calculator-grid { grid-template-columns:repeat(2,1fr); }
   .formula-section { grid-template-columns:1fr; }
