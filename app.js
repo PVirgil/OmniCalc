@@ -253,3 +253,20 @@ function initStarfield(){
   addEventListener("resize",resize);resize();draw();
 }
 renderCategories();renderGrid();initStarfield();
+
+const gridViewBtn = document.getElementById("gridViewBtn");
+const listViewBtn = document.getElementById("listViewBtn");
+
+gridViewBtn.addEventListener("click", () => {
+    grid.classList.remove("list-view");
+
+    gridViewBtn.classList.add("active");
+    listViewBtn.classList.remove("active");
+});
+
+listViewBtn.addEventListener("click", () => {
+    grid.classList.add("list-view");
+
+    listViewBtn.classList.add("active");
+    gridViewBtn.classList.remove("active");
+});
