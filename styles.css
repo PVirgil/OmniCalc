@@ -299,6 +299,45 @@ textarea {
     -webkit-tap-highlight-color: transparent;
 }
 }
+
+@media (max-width: 760px) {
+    .card-icon {
+        display: grid;
+        place-items: center;
+        width: 43px;
+        height: 43px;
+        padding: 0;
+        line-height: 1;
+        font-size: 21px;
+        transform: none;
+    }
+
+    /* Compound Interest arrow */
+    .calc-card[data-id="compound-interest"] .card-icon {
+        font-size: 29px;
+        font-weight: 700;
+        transform: translateY(-1px);
+    }
+}
+
+@media (max-width: 760px) {
+    .calc-card[data-id="quadratic"] .card-icon {
+        font-size: 17px;
+    }
+
+    .calc-card[data-id="data-storage"] .card-icon {
+        font-size: 14px;
+        letter-spacing: -1px;
+    }
+
+    .calc-card[data-id="bmi"] .card-icon {
+        font-size: 23px;
+    }
+
+    .calc-card[data-id="temperature"] .card-icon {
+        font-size: 25px;
+    }
+}
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior:auto !important; transition:none !important; }
 }
