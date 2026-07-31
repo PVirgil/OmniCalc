@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="OmniCalc — a futuristic universal calculator for math, science, finance, engineering, health and everyday calculations." />
+  <meta name="theme-color" content="#050711" />
+  <title>OmniCalc — Calculate Anything</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="OmniCalc home">
+      <span class="brand-mark">Ω</span>
+      <span>OMNI<span>CALC</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#calculators">Calculators</a>
+      <a href="#formula-library">Formula Library</a>
+      <a href="#about">About</a>
+    </nav>
+    <button class="icon-button" id="themeButton" aria-label="Toggle contrast">◐</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span></span> UNIVERSAL COMPUTATION ENGINE</div>
+      <h1>Calculate <em>anything.</em></h1>
+      <p class="hero-copy">One intelligent interface for mathematics, science, finance, engineering, health, conversions and more.</p>
+
+      <div class="command-shell">
+        <div class="command-glow"></div>
+        <span class="prompt">›_</span>
+        <input id="globalSearch" type="search" autocomplete="off" placeholder="Search “compound interest”, “BMI”, “kinetic energy”..." aria-label="Search calculators" />
+        <kbd>⌘ K</kbd>
+      </div>
+      <div id="searchSuggestions" class="search-suggestions hidden"></div>
+
+      <div class="hero-stats">
+        <div><strong id="calculatorCount">0</strong><span>CALCULATORS</span></div>
+        <div><strong>8</strong><span>INDUSTRIES</span></div>
+        <div><strong>∞</strong><span>POSSIBILITIES</span></div>
+      </div>
+    </section>
+
+    <section class="signal-strip" aria-hidden="true">
+      <div class="signal-line"></div>
+      <span>LIVE SYSTEM</span>
+      <div class="signal-line"></div>
+    </section>
+
+    <section class="workspace" id="calculators">
+      <aside class="sidebar glass">
+        <div class="sidebar-heading">DISCIPLINES</div>
+        <div id="categoryList" class="category-list"></div>
+        <div class="system-card">
+          <span class="pulse"></span>
+          <div>
+            <small>ENGINE STATUS</small>
+            <strong>OPERATIONAL</strong>
+          </div>
+        </div>
+      </aside>
+
+      <div class="main-panel">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow"><span></span> EXPLORE THE LIBRARY</div>
+            <h2 id="sectionTitle">All calculators</h2>
+          </div>
+          <div class="view-controls">
+            <button class="active" aria-label="Grid view">▦</button>
+            <button aria-label="List view" disabled>☷</button>
+          </div>
+        </div>
+        <div id="calculatorGrid" class="calculator-grid"></div>
+      </div>
+    </section>
+
+    <section class="formula-section" id="formula-library">
+      <div class="formula-copy">
+        <div class="eyebrow"><span></span> BUILT FOR UNDERSTANDING</div>
+        <h2>More than an answer.</h2>
+        <p>Every result includes the formula, variable definitions, units and transparent calculation steps.</p>
+        <div class="feature-list">
+          <div><span>01</span><p><strong>Formula transparency</strong><br>See exactly how every answer is produced.</p></div>
+          <div><span>02</span><p><strong>Instant recalculation</strong><br>Outputs update as your values change.</p></div>
+          <div><span>03</span><p><strong>Unit-aware inputs</strong><br>Use familiar units without manual conversion.</p></div>
+        </div>
+      </div>
+      <div class="formula-visual glass">
+        <div class="formula-toolbar"><span></span><span></span><span></span><small>FORMULA_VIEWER.EXE</small></div>
+        <div class="formula-code">
+          <span class="comment">// Compound interest</span>
+          <div><b>A</b> = <b>P</b>(1 + <b>r</b>/<b>n</b>)<sup>nt</sup></div>
+          <hr>
+          <p><i>P</i> Principal amount</p>
+          <p><i>r</i> Annual interest rate</p>
+          <p><i>n</i> Compounding frequency</p>
+          <p><i>t</i> Time in years</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <p class="eyebrow"><span></span> THE VISION</p>
+      <h2>A calculation layer for the world’s knowledge.</h2>
+      <p>This starter is designed to scale: add a formula object to the data array and the interface generates its calculator card and modal automatically.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#"><span class="brand-mark">Ω</span><span>OMNI<span>CALC</span></span></a>
+    <p>Results are educational estimates. Verify critical medical, legal, financial and engineering decisions with a qualified professional.</p>
+    <span>© <span id="year"></span> OMNICALC</span>
+  </footer>
+
+  <dialog id="calculatorModal">
+    <div class="modal-shell">
+      <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </dialog>
+
+  <script src="/app.js"></script>
+</body>
+</html>
