@@ -329,14 +329,14 @@ textarea {
     background: var(--green);
     box-shadow: 0 0 14px var(--green);
 
-    transform: translateY(-1px);
+    transform: translateY(-0px);
 }
 
 .system-card small {
     display: block;
     color: var(--muted);
     font: 8px var(--mono);
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .system-card strong {
