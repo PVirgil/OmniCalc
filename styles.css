@@ -310,6 +310,40 @@ textarea {
 }
 }
 
+.system-card {
+    margin-top: 24px;
+    border-top: 1px solid var(--line);
+    padding: 20px 10px 7px;
+}
+
+.status-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 14px var(--green);
+
+    transform: translateY(-1px);
+}
+
+.system-card small {
+    display: block;
+    color: var(--muted);
+    font: 8px var(--mono);
+    margin-bottom: 5px;
+}
+
+.system-card strong {
+    color: var(--green);
+    font: 9px var(--mono);
+    letter-spacing: .1em;
+}
 @media (max-width: 760px) {
     .calc-card[data-id="quadratic"] .card-icon {
         font-size: 17px;
