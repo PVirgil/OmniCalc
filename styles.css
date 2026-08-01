@@ -1,3 +1,8 @@
+html,
+:root {
+    color-scheme: only light;
+}
+
 :root {
   --bg: #050711;
   --panel: rgba(11, 16, 35, .72);
