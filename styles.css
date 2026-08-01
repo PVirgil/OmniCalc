@@ -230,6 +230,16 @@ footer p {
     font-size: 12px;
     color: var(--cyan);
 }
+
+.system-card {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.pulse {
+    margin-bottom: 2px;
+}
 @media (max-width:1000px) {
   .calculator-grid { grid-template-columns:repeat(2,1fr); }
   .formula-section { grid-template-columns:1fr; }
