@@ -417,4 +417,9 @@ textarea {
   .search-wrap input {
     caret-color: #fff !important;
   }
+
+    input,
+textarea {
+    caret-color: white;
+}
 }
