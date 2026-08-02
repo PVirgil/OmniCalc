@@ -271,6 +271,6 @@ listViewBtn.addEventListener("click", () => {
     gridViewBtn.classList.remove("active");
 });
 
-if (window.innerWidth <= 760) {
+if (window.innerWidth <= 1000) {
     listViewBtn.style.display = "none";
 }
