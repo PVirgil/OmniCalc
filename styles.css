@@ -412,3 +412,9 @@ textarea {
     -webkit-tap-highlight-color: transparent;
   }
 }
+
+@media (max-width: 1300px) {
+  .search-wrap input {
+    caret-color: #fff !important;
+  }
+}
