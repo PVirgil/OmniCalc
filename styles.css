@@ -401,3 +401,14 @@ textarea {
     padding-bottom: 0;
   }
 }
+
+@media (max-width: 1300px) {
+  .calc-card,
+  .calc-card:focus,
+  .calc-card:focus-visible,
+  .calc-card:active {
+    outline: none;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
