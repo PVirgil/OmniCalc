@@ -390,3 +390,14 @@ textarea {
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior:auto !important; transition:none !important; }
 }
+
+/* Tablet only: keep calculator input/unit boxes full height */
+@media (min-width: 601px) and (max-width: 1000px) {
+  .field input,
+  .field select {
+    min-height: 46px;
+    height: 46px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
