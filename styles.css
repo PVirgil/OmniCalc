@@ -249,7 +249,7 @@ footer p {
   .calculator-grid { grid-template-columns:repeat(2,1fr); }
   .formula-section { grid-template-columns:1fr; }
 }
-@media (max-width:950px) {
+@media (max-width:1000px) {
   nav { display:none; }
   .hero { padding-top:95px; min-height:610px; }
   .hero-stats { gap:30px; }
