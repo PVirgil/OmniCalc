@@ -245,11 +245,11 @@ footer p {
 .pulse {
     margin-bottom: 2px;
 }
-@media (max-width:1000px) {
+@media (max-width:1300px) {
   .calculator-grid { grid-template-columns:repeat(2,1fr); }
   .formula-section { grid-template-columns:1fr; }
 }
-@media (max-width:760px) {
+@media (max-width:1300px) {
   nav { display:none; }
   .hero { padding-top:95px; min-height:610px; }
   .hero-stats { gap:30px; }
@@ -349,7 +349,7 @@ textarea {
     font: 9px var(--mono);
     letter-spacing: .1em;
 }
-@media (max-width: 760px) {
+@media (max-width: 1300px) {
     .calc-card[data-id="quadratic"] .card-icon {
         font-size: 17px;
     }
@@ -368,7 +368,7 @@ textarea {
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1300px) {
 
     .card-icon {
         font-family:
